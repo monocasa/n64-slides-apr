@@ -1,0 +1,20 @@
+[package]
+authors = ["monocasa"]
+name = "n64-quickstart"
+version = "0.1.0"
+
+[dependencies]
+rs64-rt = "0.1.0"
+rs64-periph = "0.1.0"
+panic-halt = "0.2.0"
+volatile = "0.2.3"
+
+[[bin]]
+name = "n64-quickstart"
+test = false
+bench = false
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
